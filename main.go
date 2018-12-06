@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/WUMUXIAN/aws-slack-bot/jobs"
+	"github.com/TectusDreamlab/aws-slack-bot/jobs"
 	"github.com/robfig/cron"
 )
 

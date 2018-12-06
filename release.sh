@@ -45,11 +45,11 @@ git push origin releases/v${new_version}
 hash=$(git rev-parse --verify --short HEAD)
 
 # Tag the docker image
-docker tag wumuxian/aws-slack-bot wumuxian/aws-slack-bot:v${new_version}
+docker tag tdsdev/aws-slack-bot tdsdev/aws-slack-bot:v${new_version}
 
 echo "pushing images"
-docker push wumuxian/aws-slack-bot:latest
-docker push wumuxian/aws-slack-bot:v${new_version}
+docker push tdsdev/aws-slack-bot:latest
+docker push tdsdev/aws-slack-bot:v${new_version}
 
 # Cleanup
 images=$(docker images -q --filter "dangling=true")
@@ -58,7 +58,7 @@ if [ "$images" != "" ]; then
     docker rmi $images
 fi
 
-images=$(docker images -qa wumuxian/aws-slack-bot --filter before=wumuxian/aws-slack-bot:latest)
+images=$(docker images -qa tdsdev/aws-slack-bot --filter before=tdsdev/aws-slack-bot:latest)
 echo $images
 if [ "$images" != "" ]; then
     docker rmi $images

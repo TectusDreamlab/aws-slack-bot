@@ -4,7 +4,7 @@
 GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -a -tags netgo -ldflags '-w' .
 
 # Build the image
-docker build -t wumuxian/aws-slack-bot:latest .
+docker build -t tdsdev/aws-slack-bot:latest .
 
 # Clear up
 images=$(docker images -q --filter "dangling=true")

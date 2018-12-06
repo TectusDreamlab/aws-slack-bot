@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/WUMUXIAN/aws-slack-bot/stats"
+	"github.com/TectusDreamlab/aws-slack-bot/stats"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/endpoints"
 	"github.com/aws/aws-sdk-go/aws/session"
